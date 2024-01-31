@@ -10,13 +10,13 @@ function onLinkClick(event, navigate) {
 }
 
 const links = [
-  { name: "home", label: "Home", icon: "home" },
-  { name: "about", label: "About", icon: "about" },
-  { name: "contacts", label: "Contact us", icon: "contact-us" },
+  { name: "home", label: "Курс", icon: "home" },
+  { name: "about", label: "Аудирование", icon: "about" },
+  { name: "contacts", label: "Словарь", icon: "contact-us" },
 ];
 const footerLinks = [
-  { name: "home", label: "Change account", icon: "change-account" },
-  { name: "home", label: "Logout", icon: "logout" },
+  { name: "home", label: "Сменить аккаунт", icon: "change-account" },
+  { name: "home", label: "Выйти", icon: "logout" },
 ];
 </script>
 

@@ -6,7 +6,7 @@
       <h3>ACME<span>logo</span></h3>
 
       <p class="footer-links">
-        <a href="#">Home</a>
+        <a href="#">Курс</a>
         ·
         <a href="#">Blog</a>
         ·

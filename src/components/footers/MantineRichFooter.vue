@@ -12,7 +12,7 @@ const linkGroups = [
     ],
   },
   {
-    title: "Project",
+    title: "SovinionCurses",
     links: [
       { title: "Contribute", route: { name: "contacts" } },
       { title: "Media assets", route: { name: "about" } },

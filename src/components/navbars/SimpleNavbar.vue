@@ -10,9 +10,9 @@ function onLinkClick(event, navigate) {
 }
 
 const links = [
-  { name: "home", label: "Home" },
-  { name: "about", label: "About" },
-  { name: "contacts", label: "Contact us" },
+  { name: "home", label: "Курс" },
+  { name: "about", label: "Аудирование" },
+  { name: "contacts", label: "Словарь" },
 ];
 </script>
 

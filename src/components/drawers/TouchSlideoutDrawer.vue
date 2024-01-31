@@ -53,7 +53,10 @@ const config = {
 };
 
 const maxDrawerWidth = computed(() => {
-  return Math.min(config.maxDrawerWidth, viewportWidth.value * config.maxDrawerWidthPortion);
+  return Math.min(
+    config.maxDrawerWidth,
+    viewportWidth.value * config.maxDrawerWidthPortion
+  );
 });
 
 function initStyles() {
@@ -120,13 +123,15 @@ function onSwipe(event) {
   }
 
   const touchMovePosition = event.changedTouches[0].clientX;
-  let touchSlideoutCurrentLeft = touchSlideoutStartLeft + (touchMovePosition - coordsStart.x);
+  let touchSlideoutCurrentLeft =
+    touchSlideoutStartLeft + (touchMovePosition - coordsStart.x);
 
   if (touchSlideoutCurrentLeft <= 0) {
     // swipe touchmove < maxDrawerWidth
     if (coordsStart.x > maxDrawerWidth.value) {
       // if isDrawerOpened and touchstart over elSub
-      touchSlideoutCurrentLeft = touchSlideoutCurrentLeft + (coordsStart.x - maxDrawerWidth.value);
+      touchSlideoutCurrentLeft =
+        touchSlideoutCurrentLeft + (coordsStart.x - maxDrawerWidth.value);
     }
     if (touchMovePosition <= maxDrawerWidth.value) {
       touchSlideout.value.style.transform = `translateX(${touchSlideoutCurrentLeft}px)`;
@@ -174,9 +179,10 @@ function onSwipeEnd(e, direction) {
   } else if (direction === "left") {
     if (isDrawerOpen.value && coordsEnd.x <= maxDrawerWidth.value) {
       if (
-        (coordsStart.x > maxDrawerWidth.value
-        && coordsEnd.x < maxDrawerWidth.value - config.changeStateTrigger)
-        || (coordsStart.x < maxDrawerWidth.value && coordsStart.x - coordsEnd.x > config.changeStateTrigger)
+        (coordsStart.x > maxDrawerWidth.value &&
+          coordsEnd.x < maxDrawerWidth.value - config.changeStateTrigger) ||
+        (coordsStart.x < maxDrawerWidth.value &&
+          coordsStart.x - coordsEnd.x > config.changeStateTrigger)
       ) {
         isDrawerOpen.value = false;
         close();
@@ -215,11 +221,7 @@ onUnmounted(() => {
       </div>
     </div>
   </aside>
-  <div
-    ref="overlay"
-    class="overlay"
-    :class="{ hidden: !isDrawerOpen }"
-  />
+  <div ref="overlay" class="overlay" :class="{ hidden: !isDrawerOpen }" />
 </template>
 
 <style scoped lang="scss">
