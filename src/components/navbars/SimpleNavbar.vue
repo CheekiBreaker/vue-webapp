@@ -10,7 +10,7 @@ function onLinkClick(event, navigate) {
 }
 
 const links = [
-  { name: "home", label: "Курс" },
+  { name: "Курс", label: "Курс" },
   { name: "about", label: "Аудирование" },
   { name: "contacts", label: "Словарь" },
 ];
